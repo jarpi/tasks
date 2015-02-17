@@ -39,3 +39,25 @@ TODO:
 
 There are already two great resources that you can use to learn about node streams. One is the stream-adventure (see the Learn Node Interactively section) and the other is a reference called the Stream Handbook. 
 
+https://www.coursera.org/course/nlp 
+
+Books[edit]
+Books like "Fundamentals of Speech Recognition" by Lawrence Rabiner can be useful to acquire basic knowledge but may not be fully up to date (1993). Another good source can be "Statistical Methods for Speech Recognition" by Frederick Jelinek and "Spoken Language Processing (2001)" by Xuedong Huang etc. More up to date are "Computer Speech", by Manfred R. Schroeder, second edition published in 2004, and "Speech Processing: A Dynamic and Optimization-Oriented Approach" published in 2003 by Li Deng and Doug O'Shaughnessey. The recently updated textbook of "Speech and Language Processing (2008)" by Jurafsky and Martin presents the basics and the state of the art for ASR. Speaker recognition also uses the same features, most of the same front-end processing, and classification techniuqes as is done in speech recognition. A most recent comprehensive textbook, "Fundamentals of Speaker Recognition"[68] by Homayoon Beigi, is an in depth source for up to date details on the theory and practice. A good insight into the techniques used in the best modern systems can be gained by paying attention to government sponsored evaluations such as those organised by DARPA (the largest speech recognition-related project ongoing as of 2007 is the GALE project, which involves both speech recognition and translation components).
+
+A good and accessible introduction to speech recognition technology and its history is provided by the general audience book "The Voice in the Machine. Building Computers That Understand Speech" by Roberto Pieraccini (2012).
+
+The most recent book on speech recognition is "Automatic Speech Recognition: A Deep Learning Approach" (Publisher: Springer) written by D. Yu and L. Deng published near the end of 2014, with highly mathematically-oriented technical detail on how deep learning methods are derived and implemented in modern speech recognition systems based on DNNs and related deep learning methods.[61] A related book, published earlier in 2014, "Deep Learning: Methods and Applications" by L. Deng and D. Yu provides a less technical but more methodology-focused overview of DNN-based speech recognition during 2009-2014, placed within the more general context of deep learning applications including not only speech recognition but also image recognition, natural language processing, information retrieval, multimodal processing, and multitask learning. 
+
+Useful links: 
+	- Speech to text - Automatic Speech recognition 
+	. https://dictation.io/ 
+	. https://github.com/sreuter/node-speakable 
+	. https://utbrudd.bouvet.no/2014/11/11/getting-started-with-html5-speech-recognition-on-google-chrome/ 
+	. http://www.nadavos.com/making-node-speak/ 
+	. https://www.npmjs.com/package/google-speech 
+	. https://www.npmjs.com/search?q=speech+ 
+	. https://www.npmjs.com/package/google-speech-api 
+	. https://xiph.org/flac/ 
+
+	- Get text subject / meaning 
+	 
