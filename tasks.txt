@@ -9,6 +9,17 @@ Tasks for 17-02-2015
 	. http://strongloop.com/strongblog/node-js-event-loop/ 
 	. http://stackoverflow.com/questions/25568613/node-js-event-loop 
 	. https://github.com/maxogden/art-of-node/#the-art-of-node 
+	. http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js 
+	. http://nodeguide.com/ 
+	. http://www.nodebeginner.org/ 
+	. http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb 
+	. https://github.com/tj/masteringnode 
+	. http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/ 
+	. http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/ 
+	. http://www.javaworld.com/article/2079190/scripting-jvm-languages/6-things-you-should-know-about-node-js.html 
+	. http://www.smashingmagazine.com/2013/11/21/introduction-to-full-stack-javascript/ 
+	. http://www.crockford.com/javascript/javascript.html 
+	. http://www.kegel.com/c10k.html 
 
 - Streams 
 	. https://github.com/substack/stream-handbook 
@@ -60,4 +71,12 @@ Useful links:
 	. https://xiph.org/flac/ 
 
 	- Get text subject / meaning 
-	 
+	. http://phys.org/news/2013-07-natural-language-texts.html 
+	. http://stackoverflow.com/questions/1140908/parsing-meaning-from-text 
+	. Take a look to NLTK 
+
+
+
+
+
+
