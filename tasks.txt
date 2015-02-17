@@ -1,17 +1,28 @@
 - Is nodeJS a good idea?: http://nodeguide.com/convincing_the_boss.html
 - Understanding event loop: 
-	https://www.youtube.com/watch?v=oSe6QC-teUY 
-	https://www.youtube.com/watch?v=mICRK6egD-I 
-- Private members javascript: http://www.crockford.com/javascript/private.html
-- Javascript inheritance: http://www.crockford.com/javascript/inheritance.html 
+	. https://www.youtube.com/watch?v=oSe6QC-teUY 
+	. https://www.youtube.com/watch?v=mICRK6egD-I 
+	. https://vimeo.com/76557798 
+
+- Private members javascript: 
+	. http://www.crockford.com/javascript/private.html 
+
+- Javascript inheritance:
+	. http://www.crockford.com/javascript/inheritance.html 
+	
+- libuv read / watch libuv presentation: 
+	. http://nikhilm.github.io/uvbook/basics.html  
+	. Here i've learned basics of libuv, where is the nodeJS magic and why it works. 
+	. libev / libeio was replaced by libuv 
+
 
 
 TODO: 
 - Javascript GC 
 - Javascript closures 
-- Event-Loop 
 - Streams 
 - Common patterns 
 - Promises 
 - Generators 
-- Projects overview 
+- Project overview 
+
