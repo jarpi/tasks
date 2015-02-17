@@ -1,28 +1,41 @@
-- Is nodeJS a good idea?: http://nodeguide.com/convincing_the_boss.html
+Tasks for 17-02-2015 
+
+- Is nodeJS a good idea? 
+	. http://nodeguide.com/convincing_the_boss.html 
 - Understanding event loop: 
 	. https://www.youtube.com/watch?v=oSe6QC-teUY 
 	. https://www.youtube.com/watch?v=mICRK6egD-I 
 	. https://vimeo.com/76557798 
+	. http://strongloop.com/strongblog/node-js-event-loop/ 
+	. http://stackoverflow.com/questions/25568613/node-js-event-loop 
+	. https://github.com/maxogden/art-of-node/#the-art-of-node 
+
+- Streams 
+	. https://github.com/substack/stream-handbook 
+
+- Project overview 
+
 
 - Private members javascript: 
 	. http://www.crockford.com/javascript/private.html 
 
 - Javascript inheritance:
 	. http://www.crockford.com/javascript/inheritance.html 
-	
+
 - libuv read / watch libuv presentation: 
 	. http://nikhilm.github.io/uvbook/basics.html  
 	. Here i've learned basics of libuv, where is the nodeJS magic and why it works. 
 	. libev / libeio was replaced by libuv 
 
 
+Tasks for 18-02-2015 
 
 TODO: 
 - Javascript GC 
 - Javascript closures 
-- Streams 
 - Common patterns 
 - Promises 
 - Generators 
-- Project overview 
+
+There are already two great resources that you can use to learn about node streams. One is the stream-adventure (see the Learn Node Interactively section) and the other is a reference called the Stream Handbook. 
 
