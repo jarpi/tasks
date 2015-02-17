@@ -4,3 +4,14 @@
 	https://www.youtube.com/watch?v=mICRK6egD-I 
 - Private members javascript: http://www.crockford.com/javascript/private.html
 - Javascript inheritance: http://www.crockford.com/javascript/inheritance.html 
+
+
+TODO: 
+- Javascript GC 
+- Javascript closures 
+- Event-Loop 
+- Streams 
+- Common patterns 
+- Promises 
+- Generators 
+- Projects overview 
