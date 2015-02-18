@@ -24,7 +24,7 @@ Tasks for 17-02-2015
 - Streams 
 	. https://github.com/substack/stream-handbook 
 	. http://www.sitepoint.com/basics-node-js-streams/ 
-	
+
 - Project overview 
 
 
@@ -42,12 +42,22 @@ Tasks for 17-02-2015
 
 Tasks for 18-02-2015 
 
+
+
+
 TODO: 
 - Javascript GC 
 - Javascript closures 
 - Common patterns 
 - Promises 
 - Generators 
+- Get more ideas about transcript voice to text 
+- Do some example code 
+- Streams 
+- Try catch Javascript 
+
+
+
 
 There are already two great resources that you can use to learn about node streams. One is the stream-adventure (see the Learn Node Interactively section) and the other is a reference called the Stream Handbook. 
 
