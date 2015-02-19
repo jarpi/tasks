@@ -46,15 +46,15 @@ Tasks for 18-02-2015
 
 
 TODO: 
-- Javascript GC 
-- Javascript closures 
-- Common patterns 
-- Promises 
-- Generators 
-- Get more ideas about transcript voice to text 
-- Do some example code 
-- Streams 
-- Try catch Javascript 
+- Javascript GC - X 
+- Javascript closures - X 
+- Common patterns - X 
+- Promises - X 
+- Generators - X 
+- Get more ideas about transcript voice to text - V 
+- Do some example code - V  
+- Streams - V 
+- Try catch Javascript - X 
 
 
 
@@ -85,6 +85,25 @@ Useful links:
 	. http://phys.org/news/2013-07-natural-language-texts.html 
 	. http://stackoverflow.com/questions/1140908/parsing-meaning-from-text 
 	. Take a look to NLTK 
+
+
+Tasks 18-02-2014 
+
+	- Try to implement: 
+
+		.Fully Automated
+			. Search for salient or informative words (weight based estimation) 
+				- td-idf 
+					. Wi = TFij * IDFi (term frequency) 
+				- Topic signature 
+					. LLR: 1 = -2Log(lambda)>10 || 0 (Log-likelihood ratio) 
+
+	- Learn about syntax trees (could be possible that before process the file, we could avoid some words, speed optimization) 
+
+	
+
+
+
 
 
 

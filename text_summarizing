@@ -1,0 +1,31 @@
+Text summarizing: 
+		.Fully Automated
+			. Search for salient or informative words (weight based estimation) 
+				- td-idf 
+					. Wi = TFij * IDFi (term frequency) 
+				- Topic signature 
+					. LLR: 1 = -2Log(lambda)>10 || 0 (Log-likelihood ratio) 
+
+		. Semi automatic - with queries 
+			. LLR + Wi appears on a query: 1 = -2Log(lambda)>10 || 0 (Log-likelihood ratio) || Wi (belongs to query) || 0 (can be edited at will to add complex weights) 
+			. After get word weight, weight a sentence: Wi(s) = 1/|S|*SUM(Wi) (where Wi belongs to sentence) 
+		
+		.  Supervised content selection 
+			. Train a binary classifier by giving a set of good summaries and documents, then, (align, search) those sentences that match on the text, and extract 
+			useful data, position of the sentence, length, is word informative... (performance is not better than unsupervised content) 
+
+Resources: 
+	https://www.youtube.com/watch?v=nfoudtpBV68&list=PLqNqLI7n_fDbisqKkkAzrFpWQOg8E6KEf&index=1 
+	https://www.youtube.com/watch?v=hwDhO1GLb_4&list=PLqNqLI7n_fDbisqKkkAzrFpWQOg8E6KEf&index=2 
+	https://www.youtube.com/watch?v=RGLldper5II&list=PLqNqLI7n_fDbisqKkkAzrFpWQOg8E6KEf&index=3 
+	https://www.youtube.com/watch?v=jBk24DI8kg0&list=PLqNqLI7n_fDbisqKkkAzrFpWQOg8E6KEf&index=4 
+	https://www.youtube.com/watch?v=2s7f8mBwnko&list=PLqNqLI7n_fDbisqKkkAzrFpWQOg8E6KEf&index=5 
+	https://www.youtube.com/watch?v=2s7f8mBwnko&list=PLqNqLI7n_fDbisqKkkAzrFpWQOg8E6KEf&index=6 
+	https://www.youtube.com/watch?v=EZLCOrrl0Wc&list=PLqNqLI7n_fDbisqKkkAzrFpWQOg8E6KEf&index=98
+	https://www.youtube.com/watch?v=EZLCOrrl0Wc&list=PLqNqLI7n_fDbisqKkkAzrFpWQOg8E6KEf&index=99 
+	https://www.youtube.com/watch?v=IQo5dfMt8Cc&list=PLqNqLI7n_fDbisqKkkAzrFpWQOg8E6KEf&index=100 
+
+	. Python library for tokenization, steaming, word normalize... : http://www.nltk.org/ 
+	. http://www.ironcreek.net/phpsyntaxtree/?PHPSESSID=p1pglfkb2gatqj69mlum4ur3s2 (syntax tree) 
+
+	
