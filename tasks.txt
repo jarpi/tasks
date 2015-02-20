@@ -87,7 +87,7 @@ Useful links:
 	. Take a look to NLTK 
 
 
-Tasks 18-02-2014 
+Tasks [1819]-02-2015 
 
 	- Try to implement: 
 
@@ -102,6 +102,11 @@ Tasks 18-02-2014
 
 	
 
+Tasks 20-02-2015 
+
+- Finish tf-idf hand made in python 
+- Start to read the nltk book 
+- Take a look opencv library 
 
 
 
