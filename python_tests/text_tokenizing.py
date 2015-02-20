@@ -1,7 +1,8 @@
 #!/usr/bin/env python 
-import wordHit, funcs
+import wordHit, docHit, funcs
 
 words = {} 
+docs = {} 
 
 def countWordsInLine(line): 
 	line.replace("\n","")
@@ -13,30 +14,32 @@ def parseLines(document):
 	wordCount = 0 
 	for line in document: 
 		wordCount += countWordsInLine(line) 
-		fillWords(line) 
+		fillWords(line, document) 
 	return wordCount 
 
-def fillWords(line): 
+def fillWords(line,document): 
 	global words 
-
-	for word in line.replace("\n","").replace("\r\n","").split(" "): 
+	for word in line.lower().replace("\n","").replace("\r\n","").split(" "): 
 		newHit = words.get(word, wordHit.wordHit(word)) 
-		newHit.addOcurrence() 
-		newHit.addDocContainingWord() 
+		newHit.addOcurrence()  
+		newHit.addDocContainingWord(document.name) 
 		words[word] = newHit 
 
 if __name__ == '__main__':
-	#documentList = ["./texts/shak.txt","./texts/text2.txt"]; 
-	documentList = ["./texts/test.txt"]; 
+	documentList = ["./texts/shak.txt","./texts/text2.txt"]; 
+	# documentList = ["./texts/test.txt"]; 
 	wordCount = 0 
 	totalDocs = len(documentList) 
+	helpers = funcs.funcs() 
 	for fileName in documentList: 
+		doc = docHit.docHit(fileName) 
 		document = open(fileName,'r') 
-		wordCount += parseLines(document) 
+		wordCount = parseLines(document) 
+		doc.setWordCount(wordCount) 
+		docs[fileName] = doc 
 		document.close() 
-		totalDocs+=1 
-	print wordCount 
-	print words 
-	print ("Exit") 
+	for wordHitKey, wordHitInstance in words.items(): 
+		wordHitInstance.setTFIDF(helpers.tf(wordHitInstance.getOcurrences(), wordCount) * helpers.idf(totalDocs, wordHitInstance.getNDocsContainingWord())) 
+		print wordHitInstance 
 
-
+		

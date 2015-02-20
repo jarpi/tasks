@@ -1,7 +1,11 @@
-class funcs(): 
+#!/usr/bin/python 
+import math 
 
-	def tf(ocurrences,totalWordsInDoc): 
+class funcs: 
+
+	def tf(self,ocurrences,totalWordsInDoc): 
 		return ocurrences/totalWordsInDoc 
-	def idf(totalDocs,docsContainingWord): 
-		return math.log(totalDocs/docsContainingWord) 
+	def idf(self,totalDocs,docsContainingWord): 
+		print str(totalDocs) + " " + str(docsContainingWord) 
+		return math.log(totalDocs/docsContainingWord)
 
