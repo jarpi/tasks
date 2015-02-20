@@ -3,14 +3,14 @@ class wordHit(object):
 		self.word = word 
 		self.ocurrences = 0 
 		self.docsContainingWord = 0 
-	def getWord(): 
+	def getName(self): 
 		return self.word 
-	def getOcurrences(): 
+	def getOcurrences(self): 
 		return self.ocurrences 
-	def getDocsContainingWord(): 
+	def getDocsContainingWord(self): 
 		return self.docsContainingWord 
-	def addOcurrence(): 
+	def addOcurrence(self): 
 		self.ocurrences += 1 
-	def addDocContainingWord(): 
+	def addDocContainingWord(self): 
 		self.docsContainingWord += 1 
 

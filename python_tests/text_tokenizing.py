@@ -1,6 +1,7 @@
 #!/usr/bin/env python 
-import wordHit 
-import funcs 
+import wordHit, funcs
+
+words = {} 
 
 def countWordsInLine(line): 
 	line.replace("\n","")
@@ -8,25 +9,34 @@ def countWordsInLine(line):
 	line.replace(".","") 
 	return len(line.split(None)) 
 
-def groupCountWordsInDocument(document): 
-	global words 
-	global wordCount 
-	for line in document:  
+def parseLines(document): 
+	wordCount = 0 
+	for line in document: 
 		wordCount += countWordsInLine(line) 
-		for word in line.lower().split(None):  
-			words[word] = words.get(word,0)+1 
+		fillWords(line) 
+	return wordCount 
+
+def fillWords(line): 
+	global words 
+
+	for word in line.replace("\n","").replace("\r\n","").split(" "): 
+		newHit = words.get(word, wordHit.wordHit(word)) 
+		newHit.addOcurrence() 
+		newHit.addDocContainingWord() 
+		words[word] = newHit 
 
 if __name__ == '__main__':
 	#documentList = ["./texts/shak.txt","./texts/text2.txt"]; 
 	documentList = ["./texts/test.txt"]; 
-	words = {} 
 	wordCount = 0 
-	i = 0 
+	totalDocs = len(documentList) 
 	for fileName in documentList: 
 		document = open(fileName,'r') 
-		groupCountWordsInDocument(document) 
+		wordCount += parseLines(document) 
 		document.close() 
 		totalDocs+=1 
 	print wordCount 
 	print words 
 	print ("Exit") 
+
+
