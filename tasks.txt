@@ -112,6 +112,8 @@ Tasks 21-02-2015
 
 - Read NLTK book - http://www.nltk.org/book/ 
 - Finish tf-idf hand made in python - 
+- See generators talk in nodejs - 
+
 
 
 
