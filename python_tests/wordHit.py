@@ -2,7 +2,6 @@ class wordHit:
 	def __init__(self,word): 
 		self.word = word 
 		self.ocurrences = 0 
-		self.docsContainingWord = [] 
 		self.tfidf = 0 
 	def getName(self): 
 		return self.word 
@@ -20,5 +19,5 @@ class wordHit:
 	def getTFIDF(self): 
 		return self.tfidf 
 	def __str__(self): 
-		return "WORD: " + self.word + " " + " OCURRENCES: " + str(self.ocurrences) + " " + " DOCS: " + str(len(self.docsContainingWord)) + " " + " TFIDF: " + str(self.tfidf) 
+		return "WORD: " + self.word + " " + " OCURRENCES: " + str(self.ocurrences) +  " " + " TFIDF: " + str(self.tfidf) 
 

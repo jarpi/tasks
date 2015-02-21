@@ -1,8 +1,16 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python 
 import wordHit, docHit, funcs
 
 words = {} 
 docs = {} 
+
+def countWordInDocs(word): 
+	wordInDocs = 0
+	for docKey, docValue in docs.items(): 
+		if docValue.existsWordInContainer(word): 
+			wordInDocs += 1 
+	return wordInDocs 
 
 def countWordsInLine(line): 
 	line.replace("\n","")
@@ -12,19 +20,17 @@ def countWordsInLine(line):
 
 def parseLines(document): 
 	wordCount = 0 
-	for line in document: 
+	for line in document.docHandler: 
 		wordCount += countWordsInLine(line) 
 		fillWords(line, document) 
 	return wordCount 
 
 def fillWords(line,document): 
 	global words 
-	for word in line.lower().replace("\n","").replace("\r\n","").split(" "): 
-		newHit = docs[document.name].wordContainer.get(word, wordHit.wordHit(word)) 
-		newHit.addOcurrence()  
-		# newHit.addDocContainingWord(document.name) 
-		docs[document.name].wordContainer[word.getName()] = wordHit 
-		# words[word] = newHit 
+	for word in line.lower().replace('\n',' ').replace('\r','').replace('.','').split(" "): 
+		newHit = document.getWordFromContainer(word) 
+		newHit.addOcurrence() 
+		document.addWordToContainer(newHit) 
 
 if __name__ == '__main__':
 	#documentList = ["./texts/shak.txt","./texts/text2.txt"]; 
@@ -32,17 +38,16 @@ if __name__ == '__main__':
 	wordCount = 0 
 	totalDocs = len(documentList) 
 	helpers = funcs.funcs() 
-	for fileName in documentList: 
-		doc = docHit.docHit(fileName) 
-		document = open(fileName,'r') 
-		wordCount = parseLines(document) 
+	for documentFilename in documentList: 
+		doc = docHit.docHit(documentFilename) 
+		wordCount = parseLines(doc) 
 		doc.setWordCount(wordCount) 
-		docs[fileName] = doc 
-		document.close() 
-	for docHitKey, docHitValue in docs.items(): 
-		for wordHitKey, wordHitValue in docHitValue.wordContainer.items(): 
-			wordHitValue.setTFIDF(helpers.tfidf(wordHitValue.getOcurrences(), docHitValue.getWordCount(), totalDocs, wordHitValue.getNDocsContainingWord())) 
-			print wordHitValue  
+		docs[documentFilename] = doc 
+		doc.closeDocument() 
+	for docKey, docValue in docs.items(): 
+		for wordKey, wordValue in docValue.getWordContainer(): 
+			wordValue.setTFIDF(helpers.tfidf(wordValue.getOcurrences(), docValue.getWordCount(), totalDocs, countWordInDocs(wordValue.getName())))
+			print wordValue 
 
 
 
