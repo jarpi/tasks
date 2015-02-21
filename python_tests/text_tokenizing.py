@@ -20,14 +20,15 @@ def parseLines(document):
 def fillWords(line,document): 
 	global words 
 	for word in line.lower().replace("\n","").replace("\r\n","").split(" "): 
-		newHit = words.get(word, wordHit.wordHit(word)) 
+		newHit = docs[document.name].wordContainer.get(word, wordHit.wordHit(word)) 
 		newHit.addOcurrence()  
-		newHit.addDocContainingWord(document.name) 
-		words[word] = newHit 
+		# newHit.addDocContainingWord(document.name) 
+		docs[document.name].wordContainer[word.getName()] = wordHit 
+		# words[word] = newHit 
 
 if __name__ == '__main__':
-	documentList = ["./texts/shak.txt","./texts/text2.txt"]; 
-	# documentList = ["./texts/test.txt"]; 
+	#documentList = ["./texts/shak.txt","./texts/text2.txt"]; 
+	documentList = ["./texts/test.txt","./texts/test2.txt"]; 
 	wordCount = 0 
 	totalDocs = len(documentList) 
 	helpers = funcs.funcs() 
@@ -38,8 +39,12 @@ if __name__ == '__main__':
 		doc.setWordCount(wordCount) 
 		docs[fileName] = doc 
 		document.close() 
-	for wordHitKey, wordHitInstance in words.items(): 
-		wordHitInstance.setTFIDF(helpers.tf(wordHitInstance.getOcurrences(), wordCount) * helpers.idf(totalDocs, wordHitInstance.getNDocsContainingWord())) 
-		print wordHitInstance 
+	for docHitKey, docHitValue in docs.items(): 
+		for wordHitKey, wordHitValue in docHitValue.wordContainer.items(): 
+			wordHitValue.setTFIDF(helpers.tfidf(wordHitValue.getOcurrences(), docHitValue.getWordCount(), totalDocs, wordHitValue.getNDocsContainingWord())) 
+			print wordHitValue  
 
-		
+
+
+
+

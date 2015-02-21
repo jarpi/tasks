@@ -104,9 +104,14 @@ Tasks [1819]-02-2015
 
 Tasks 20-02-2015 
 
-- Finish tf-idf hand made in python 
-- Start to read the nltk book 
-- Take a look opencv library 
+- Finish tf-idf hand made in python - X 
+- Start to read the nltk book - (21-02-2015)
+- Take a look opencv library - (22-02-2015) 
+
+Tasks 21-02-2015 
+
+- Read NLTK book - http://www.nltk.org/book/ 
+- Finish tf-idf hand made in python - 
 
 
 

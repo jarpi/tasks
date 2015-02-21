@@ -20,5 +20,5 @@ class wordHit:
 	def getTFIDF(self): 
 		return self.tfidf 
 	def __str__(self): 
-		return self.word + " " + str(self.ocurrences) + " " + str(self.docsContainingWord) + " " + str(self.tfidf) 
+		return "WORD: " + self.word + " " + " OCURRENCES: " + str(self.ocurrences) + " " + " DOCS: " + str(len(self.docsContainingWord)) + " " + " TFIDF: " + str(self.tfidf) 
 
