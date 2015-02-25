@@ -114,6 +114,22 @@ Tasks 21-02-2015
 - Finish tf-idf hand made in python - 
 - See generators talk in nodejs - 
 
+Tasks 23-02-2015 
+
+- Search for a speech recognizition API 
+	. https://www.talater.com/annyang/ 
+	. http://www.google.com/intl/es/chrome/demos/speech.html
+	. http://en.wikipedia.org/wiki/Speech_recognition 
+	. http://en.wikipedia.org/wiki/Amplitude 
+	. http://en.wikipedia.org/wiki/Frequency 
+	. http://en.wikipedia.org/wiki/Artificial_neural_network 
+	. https://github.com/gillesdemey/google-speech-v2 
+	. http://text-processing.com/ 
+	. https://github.com/Uberi/speech_recognition 
+
+	
+
+
 
 
 
