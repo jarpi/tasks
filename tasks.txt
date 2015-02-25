@@ -127,9 +127,16 @@ Tasks 23-02-2015
 	. http://text-processing.com/ 
 	. https://github.com/Uberi/speech_recognition 
 
-	
+Tasks 25-02-2015 
 
+- Improve tfidf algorithm 
+- Search for a tested library to do tfidf 
+- Try to automatize voice transcript with google api 
+- Read about openCV 
 
+	- Resources 
+		. http://streamhacker.com/ 
+		
 
 
 
