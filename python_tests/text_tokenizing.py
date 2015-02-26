@@ -6,9 +6,9 @@ docs = {}
 totalWordsInDoc = {}
 
 def tf(ocurrences,totalWordsInDoc): 
-	return float(ocurrences)/totalWordsInDoc
+	return 1+float(math.log(ocurrences))
 def idf(totalDocs,docsContainingWord): 
-	return round(float(1+math.log(float(totalDocs)/(float(docsContainingWord)),10)),4)
+	return round(float(1+math.log(totalDocs/docsContainingWord,10)),4)
 
 def getDocsContainingWord(word): 
 	wordInDocs = 0 

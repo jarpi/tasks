@@ -1,0 +1,6 @@
+from nltk.corpus import movie_reviews 
+from textblob.classifiers import NaiveBayesClassifier  
+
+train = [ 
+		
+		] 

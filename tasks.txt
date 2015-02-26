@@ -136,10 +136,18 @@ Tasks 25-02-2015
 
 	- Resources 
 		. http://streamhacker.com/ 
-		
+		. http://radimrehurek.com/2014/02/word2vec-tutorial/ 
+		. http://stanford.edu/~rjweiss/public_html/IRiSS2013/text2/notebooks/tfidf.html 
+- Parse shakespeare text - TOTALTIME: 0:06:30.379532 
 
 
+Tasks 26-02-2015 
 
+- Try to use machine learning 
+- Do some more tests in openCV 
+
+- Resources 
+	. http://stevenloria.com/how-to-build-a-text-classification-system-with-python-and-textblob/ 
 
 
 
