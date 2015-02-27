@@ -151,5 +151,14 @@ Tasks 26-02-2015
 
 
 
+Tasks 27-02-2015 
 
+- Make a demo for sentiment analysis for demo day 
+- Search for reflection in javascript 
+
+- Resources 
+	. https://github.com/vinta/awesome-python 
+	. https://github.com/sindresorhus/awesome-nodejs 
+
+	
 

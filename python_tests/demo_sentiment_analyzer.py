@@ -2,7 +2,6 @@
 #!/usr/bin/env python 
 import sys 
 from textblob.classifiers import NaiveBayesClassifier 
-from textblob import TextBlob 
 
 train_set = [
     ('I love this sandwich.', 'pos'),
@@ -18,7 +17,7 @@ train_set = [
     ('I am tired of this stuff.', 'neg'),
     ("I can't deal with this", 'neg'),
     ('He is my sworn enemy!', 'neg'),
-    ('My boss is horrible.', 'neg'), 
+    ('My boss is horrible.', 'neg') 
     ('I hate', 'neg') 
     ] 
     
