@@ -4,21 +4,25 @@ import sys
 from textblob.classifiers import NaiveBayesClassifier 
 
 train_set = [
-    ('I love this sandwich.', 'pos'),
-    ('I like this', 'pos'), 
-    ('This is an amazing place!', 'pos'),
-    ('I feel very good about these beers.', 'pos'),
-    ('This is my best work.', 'pos'),
-    ('What an awesome view', 'pos'), 
-    ('He is my friend', 'pos'), 
+    ('i love this sandwich.', 'pos'),
+    ('i like', 'pos'), 
+    ('i do like', 'pos'), 
+    ('this is an amazing place!', 'pos'),
+    ('i feel very good about these beers.', 'pos'),
+    ('this is my best work.', 'pos'),
+    ('what an awesome view', 'pos'), 
+    ('he is my friend', 'pos'), 
+    ('do you like', 'pos'), 
 
-    ('I do not like this restaurant', 'neg'),
-    ("I don't like this",'neg'),  
-    ('I am tired of this stuff.', 'neg'),
-    ("I can't deal with this", 'neg'),
-    ('He is my sworn enemy!', 'neg'),
-    ('My boss is horrible.', 'neg') 
-    ('I hate', 'neg') 
+    ('i do not like this restaurant', 'neg'),
+    ("i don't like this",'neg'),  
+    ('i am tired of this stuff.', 'neg'),
+    ("i can't deal with this", 'neg'),
+    ('he is my sworn enemy!', 'neg'),
+    ('enemy', 'neg'), 
+    ('my boss is horrible.', 'neg'),  
+    ('i do not like', 'neg'), 
+    ('i hate', 'neg') 
     ] 
     
 test_set = [
@@ -31,9 +35,11 @@ test_set = [
     ] 
 
 if __name__ == '__main__': 
+    print "Initiallizing classifier... (training...)"
     classifier = NaiveBayesClassifier(train_set) 
     print classifier.accuracy(test_set) 
-    print "Ready: " 
+    print classifier.show_informative_features() 
+    print "Ready " 
     while 1:
         try:
             line = sys.stdin.readline() 

@@ -162,3 +162,26 @@ Tasks 27-02-2015
 
 	
 
+Tasks for 2-03-2015 
+
+- Analyze gensim lib for text summarizing 
+- Take a look to cartoDB project 
+
+- Resources: 
+	. http://libots.sourceforge.net/
+	. http://www.summarization.com/mead/ 
+	. https://github.com/thavelick/summarize 
+	. https://groups.google.com/forum/#!forum/gensim 
+	. http://cscorley.github.io/2014/05/06/using-gensim-for-lda/ 
+
+
+Tasks for 3-03-2015 
+
+- Try to configure a featureserver (gis) 
+- Do some JS tutorials for nodeschool 
+
+
+
+
+
+
