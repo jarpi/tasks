@@ -186,7 +186,20 @@ Tasks for 4-03-2015
 	- Try to get something working on text summarize 
 	- Keep working on nodeschool tutorials 
 
+	- Resources 
+		. http://www.predictiveanalyticstoday.com/top-11-free-software-for-text-analysistext-mining-text-analytics/ 
+		. http://rekn.itercommunity.org/MR/tm
+		. http://entopix.com/so-you-need-to-understand-language-data-open-source-nlp-software-can-help.html 
+		. http://www.r-bloggers.com/so-what-can-text-analysis-do-for-you/ 
+		. http://en.wikipedia.org/wiki/Weka_(machine_learning) 
+		. http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation
+		. http://en.wikipedia.org/wiki/Latent_semantic_indexing 
+		. http://en.wikipedia.org/wiki/Vector_space_model 
+		. http://en.wikipedia.org/wiki/Cosine_similarity 
+		. http://www.predictiveanalyticstoday.com/top-predictive-analytics-software-api/ 
+		. http://www.predictiveanalyticstoday.com/text-analytics/ 
 
+		
 
 
 
