@@ -165,7 +165,7 @@ Tasks 27-02-2015
 Tasks for 2-03-2015 
 
 - Analyze gensim lib for text summarizing 
-- Take a look to cartoDB project 
+- Take a look to featureserver project 
 
 - Resources: 
 	. http://libots.sourceforge.net/
@@ -180,6 +180,11 @@ Tasks for 3-03-2015
 - Try to configure a featureserver (gis) 
 - Do some JS tutorials for nodeschool 
 
+
+Tasks for 4-03-2015 
+	- Standby featureserver project 
+	- Try to get something working on text summarize 
+	- Keep working on nodeschool tutorials 
 
 
 
