@@ -11,8 +11,8 @@ docs = {}
 docLines = {} 
 if __name__ == '__main__':
 	startTime = datetime.datetime.now() 
-	documentList = ["./texts/t11.txt","./texts/t22.txt"]; 
-	#  documentList = ["./texts/shak.txt"]; 
+	# documentList = ["./texts/t11.txt","./texts/t22.txt"]; 
+	documentList = ["./texts/shak.txt"]; 
 	totalDocs = len(documentList) 
 	for documentFilename in documentList: 
 		doc = open(documentFilename,'r')  

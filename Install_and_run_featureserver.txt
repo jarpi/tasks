@@ -1,0 +1,46 @@
+// Install and run featureserver 
+
+// Create a virtual environment to resolve dependencies of feature servewr 
+python virtualenv.py featureserver 
+
+// Activate 
+source featureserver/bin/activate 
+
+// Install python package installer 
+sudo easy_install pip
+
+// Link libraries and resolve dependencies 
+sudo CPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2 CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments pip install lxml 
+
+pip install shortuuid 
+
+(pyspatialite tarball): 
+	- python setup.py build
+	- python setup.py install 
+
+pip install oauth2  
+
+pip install psycopg2 
+
+pip install sqlalchemy 
+
+pip install simplejson 
+
+pip instal cheetah 
+
+	One time only:	 
+
+		
+
+		Install GDAL 
+
+		Intall PROJ 
+
+		sudo port install libxml2 libxslt  
+
+		cp libspatialite-osx-x86-2.3.1/include/*.* /usr/include/lib 
+
+		cp libspatialite-osx-x86-2.3.1/lib/*.* /usr/lib 
+
+
+

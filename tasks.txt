@@ -199,7 +199,41 @@ Tasks for 4-03-2015
 		. http://www.predictiveanalyticstoday.com/top-predictive-analytics-software-api/ 
 		. http://www.predictiveanalyticstoday.com/text-analytics/ 
 
+	- Algorithms to implement 
+		. http://radimrehurek.com/gensim/models/word2vec.html 
+		. https://code.google.com/p/word2vec/
+		. http://stackoverflow.com/questions/22129943/how-to-calculate-the-sentence-similarity-using-word2vec-model-of-gensim-with-pyt 
+		. https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-2-word-vectors 
+		. http://streamhacker.com/2014/12/29/word2vec-nltk/ 
+		. http://www.quora.com/Word2vec/What-are-some-interesting-Word2Vec-results 
+		. http://radimrehurek.com/2013/09/word2vec-in-python-part-two-optimizing/ 
+		. http://www.predictiveanalyticstoday.com/text-analytics/ 
+		. http://geojsonlint.com/ 
+
+
 		
 
+
+
+Tasks for 5-03-2015 
+
+	- Install feature server - V 
+	- Try to get it working - ¬ 
+
+	Resources: 
+		. http://lists.osgeo.org/pipermail/featureserver/2008-August/000260.html 
+		. http://jsonlint.com/ 
+		. http://geojsonlint.com/ 
+		. http://geojson.org/geojson-spec.html#named-crs
+		. http://xml.fmi.fi/namespace/meteorology/conceptual-model/meteorological-objects/2009/04/28/docindex43.html 
+		. http://www.gmlcentral.com/gml-model/ 
+
+
+Tasks for 6-03-2015 
+
+	- Try to search an alternative for featureserver 
+	- Attend to skype meeting 
+
+	
 
 
