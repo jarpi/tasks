@@ -1,0 +1,37 @@
+-- SELECT all rows from geom table 
+SELECT * FROM tm_world_borders_s_11
+
+-- SELECT column polygon as text from geom table 
+SELECT ST_AsText(the_geom)  FROM tm_world_borders_s_11;  
+
+-- SELECT geometry type from geom table 
+SELECT GeometryType(the_geom) FROM tm_world_borders_s_11 
+
+-- INSERT a new value containing a point type instead of multipolygon 
+INSERT INTO tm_world_borders_s_11 
+VALUES (
+ST_GeomFromText('POINT(-44.3 60.1)',4326),
+0,
+'AS',
+'AU',
+'AUS',
+-24.973,
+136.89,
+'Australia',
+20310208,
+9,
+53,
+36,
+999,
+clock_timestamp(),
+clock_timestamp(),
+ST_GeomFromText('MULTIPOLYGON(((18582466.6407201 -61474.0236014392,18582622.9332852 -54918.2569349424,18585744.9997239 -56371.6995217589,18582466.6407201 -61474.0236014392)))',3857)
+) 
+
+-- SELECT geomtry type of the geometry column (MUST BE POINT) 
+SELECT GeometryType(the_geom)  FROM tm_world_borders_s_11 WHERE cartodb_id = 999 
+
+-- DELETE IT 
+DELETE FROM tm_world_borders_s_11 WHERE cartodb_id = 999 
+
+

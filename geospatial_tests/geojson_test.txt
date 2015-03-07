@@ -1,0 +1,45 @@
+{
+	"crs": null, 
+	"type": "FeatureCollection", 
+	"features": [
+		{"geometry": 
+			{"type": "MultiPolygon", 
+				"coordinates": 
+				[
+					[
+						-69.882233, 12.41111
+					], 
+					[
+						-70.059448, 12.538055
+					], 
+					[
+						-70.063065, 12.628611
+					], 
+					[
+						-69.882233, 12.41111
+					] 
+				]
+			}, 
+			"type": "Feature", 
+			"id": 13, 
+			"properties": 
+			{
+				"the_geom_webmercator": "0106000020110F00000100000001030000000100000004000000EBA4F4A5EDAC5DC15F39137D933F3541744EE78431C05DC1272C9EA01C783541A8A2072E96C05DC1FE94F75E75A03541EBA4F4A5EDAC5DC15F39137D933F3541", 
+				"name": "Aruba", 
+				"area": "0", 
+				"region": "19", 
+				"lon": "-69.977", 
+				"updated_at": "2012-10-26 00:00:00+02:00", 
+				"subregion": "29", 
+				"iso3": "ABW", 
+				"iso2": "AW", 
+				"fips": "AA", 
+				"lat": "12.517", 
+				"un": "533", 
+				"created_at": "2012-10-26 00:00:00+02:00", 
+				"pop2005": "102897"
+			}
+		}
+	]
+} 
+
