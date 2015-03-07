@@ -1,8 +1,8 @@
 ##  Tasks for 17-02-2015 
 
-- ###  Is nodeJS a good idea? 
+- ### Is nodeJS a good idea? 
 	* http://nodeguide.com/convincing_the_boss.html 
-- ###  Understanding event loop: 
+- ### Understanding event loop: 
 	* https://www.youtube.com/watch?v=oSe6QC-teUY 
 	* https://www.youtube.com/watch?v=mICRK6egD-I 
 	* https://vimeo.com/76557798 
