@@ -1,8 +1,8 @@
-## H2 Tasks for 17-02-2015 
+##  Tasks for 17-02-2015 
 
-- ### H3 Is nodeJS a good idea? 
+- ###  Is nodeJS a good idea? 
 	* http://nodeguide.com/convincing_the_boss.html 
-- ### H3 Understanding event loop: 
+- ###  Understanding event loop: 
 	* https://www.youtube.com/watch?v=oSe6QC-teUY 
 	* https://www.youtube.com/watch?v=mICRK6egD-I 
 	* https://vimeo.com/76557798 
@@ -21,29 +21,29 @@
 	* http://www.crockford.com/javascript/javascript.html 
 	* http://www.kegel.com/c10k.html 
 
-- ### H3 Streams 
+- ###  Streams 
 	* https://github.com/substack/stream-handbook 
 	* http://www.sitepoint.com/basics-node-js-streams/ 
 
-- ### H3 Project overview 
+- ###  Project overview 
 
 
-- ### H3 Private members javascript: 
+- ###  Private members javascript: 
 	* http://www.crockford.com/javascript/private.html 
 
-- ### H3 Javascript inheritance:
+- ###  Javascript inheritance:
 	* http://www.crockford.com/javascript/inheritance.html 
 
-- ### H3 libuv read / watch libuv presentation: 
+- ###  libuv read / watch libuv presentation: 
 	* http://nikhilm.github.io/uvbook/basics.html  
 	* Here i've learned basics of libuv, where is the nodeJS magic and why it works  
 	* libev / libeio was replaced by libuv 
 
 
-## H2 Tasks for 18-02-2015 
+##  Tasks for 18-02-2015 
 
 
-- ### H3 TODO: 
+- ###  TODO: 
 	* Javascript GC - X 
 	* Javascript closures - X 
 	* Common patterns - X 
@@ -69,7 +69,7 @@ A good and accessible introduction to speech recognition technology and its hist
 The most recent book on speech recognition is "Automatic Speech Recognition: A Deep Learning Approach" (Publisher: Springer) written by D* Yu and L* Deng published near the end of 2014, with highly mathematically-oriented technical detail on how deep learning methods are derived and implemented in modern speech recognition systems based on DNNs and related deep learning methods*[61] A related book, published earlier in 2014, "Deep Learning: Methods and Applications" by L* Deng and D* Yu provides a less technical but more methodology-focused overview of DNN-based speech recognition during 2009-2014, placed within the more general context of deep learning applications including not only speech recognition but also image recognition, natural language processing, information retrieval, multimodal processing, and multitask learning* 
 ``` 
 
-- ### H3 Useful links: 
+- ###  Useful links: 
 	* Speech to text - Automatic Speech recognition 
 		* https://dictation.io/ 
 		* https://github.com/sreuter/node-speakable 
@@ -86,7 +86,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* Take a look to NLTK 
 
 
-- ### H3 Tasks [1819]-02-2015 
+- ###  Tasks [1819]-02-2015 
 
 	- Try to implement: 
 		* Fully Automated
@@ -100,19 +100,19 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	
 
-- ### H3 Tasks 20-02-2015 
+- ###  Tasks 20-02-2015 
 
 	* Finish tf-idf hand made in python - X 
 	* Start to read the nltk book - (21-02-2015)
 	* Take a look opencv library - (22-02-2015) 
 
-- ### H3 Tasks 21-02-2015 
+- ###  Tasks 21-02-2015 
 
 	* Read NLTK book - http://www*nltk*org/book/ 
 	* Finish tf-idf hand made in python - 
 	* See generators talk in nodejs - 
 
-- ### H3 Tasks 23-02-2015 
+- ###  Tasks 23-02-2015 
 
 	- Search for a speech recognizition API 
 		* https://www.talater.com/annyang/ 
@@ -125,7 +125,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://text-processing.com/ 
 		* https://github.com/Uberi/speech_recognition 
 
-- ### H3 Tasks 25-02-2015 
+- ###  Tasks 25-02-2015 
 
 	* Improve tfidf algorithm 
 	* Search for a tested library to do tfidf 
@@ -139,7 +139,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 	- Parse shakespeare text - TOTALTIME: 0:06:30*379532 
 
 
-- ### H3 Tasks 26-02-2015 
+- ###  Tasks 26-02-2015 
 
 	- Try to use machine learning 
 	- Do some more tests in openCV 
@@ -148,7 +148,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 
 
-- ### H3 Tasks 27-02-2015 
+- ###  Tasks 27-02-2015 
 
 	- Make a demo for sentiment analysis for demo day 
 	- Search for reflection in javascript 
@@ -159,7 +159,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	
 
-- ### H3 Tasks for 2-03-2015 
+- ###  Tasks for 2-03-2015 
 
 	- Analyze gensim lib for text summarizing 
 	- Take a look to featureserver project 
@@ -172,13 +172,13 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://cscorley.github.io/2014/05/06/using-gensim-for-lda/ 
 
 
-- ### H3 Tasks for 3-03-2015 
+- ###  Tasks for 3-03-2015 
 
 	* Try to configure a featureserver (gis) 
 	* Do some JS tutorials for nodeschool 
 
 
-- ### H3 Tasks for 4-03-2015 
+- ###  Tasks for 4-03-2015 
 	* Standby featureserver project 
 	* Try to get something working on text summarize 
 	* Keep working on nodeschool tutorials 
@@ -207,7 +207,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://www.predictiveanalyticstoday.com/text-analytics/ 
 		* http://geojsonlint.com/ 
 
-- ### H3 Tasks for 5-03-2015 
+- ###  Tasks for 5-03-2015 
 
 	* Install feature server - V 
 	* Try to get it working - ¬ 
@@ -220,7 +220,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://xml.fmi.fi/namespace/meteorology/conceptual-model/meteorological-objects/2009/04/28/docindex43.html 
 		* http://www.gmlcentral.com/gml-model/ 
 
-- ### H3 Tasks for 6-03-2015 
+- ###  Tasks for 6-03-2015 
 
 	* Try to search an alternative for featureserver 
 	* Attend to skype meeting 
