@@ -1,4 +1,4 @@
-##  Tasks for 17-02-2015 
+## Tasks for 17-02-2015 
 
 - ### Is nodeJS a good idea? 
 	* http://nodeguide.com/convincing_the_boss.html 
@@ -21,20 +21,20 @@
 	* http://www.crockford.com/javascript/javascript.html 
 	* http://www.kegel.com/c10k.html 
 
-- ###  Streams 
+- ### Streams 
 	* https://github.com/substack/stream-handbook 
 	* http://www.sitepoint.com/basics-node-js-streams/ 
 
-- ###  Project overview 
+- ### Project overview 
 
 
-- ###  Private members javascript: 
+- ### Private members javascript: 
 	* http://www.crockford.com/javascript/private.html 
 
-- ###  Javascript inheritance:
+- ### Javascript inheritance:
 	* http://www.crockford.com/javascript/inheritance.html 
 
-- ###  libuv read / watch libuv presentation: 
+- ### libuv read / watch libuv presentation: 
 	* http://nikhilm.github.io/uvbook/basics.html  
 	* Here i've learned basics of libuv, where is the nodeJS magic and why it works  
 	* libev / libeio was replaced by libuv 
@@ -43,7 +43,7 @@
 ##  Tasks for 18-02-2015 
 
 
-- ###  TODO: 
+- ### TODO: 
 	* Javascript GC - X 
 	* Javascript closures - X 
 	* Common patterns - X 
@@ -86,7 +86,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* Take a look to NLTK 
 
 
-- ###  Tasks [1819]-02-2015 
+- ### Tasks [1819]-02-2015 
 
 	- Try to implement: 
 		* Fully Automated
@@ -100,19 +100,19 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	
 
-- ###  Tasks 20-02-2015 
+- ### Tasks 20-02-2015 
 
 	* Finish tf-idf hand made in python - X 
 	* Start to read the nltk book - (21-02-2015)
 	* Take a look opencv library - (22-02-2015) 
 
-- ###  Tasks 21-02-2015 
+- ### Tasks 21-02-2015 
 
 	* Read NLTK book - http://www*nltk*org/book/ 
 	* Finish tf-idf hand made in python - 
 	* See generators talk in nodejs - 
 
-- ###  Tasks 23-02-2015 
+- ### Tasks 23-02-2015 
 
 	- Search for a speech recognizition API 
 		* https://www.talater.com/annyang/ 
@@ -125,7 +125,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://text-processing.com/ 
 		* https://github.com/Uberi/speech_recognition 
 
-- ###  Tasks 25-02-2015 
+- ### Tasks 25-02-2015 
 
 	* Improve tfidf algorithm 
 	* Search for a tested library to do tfidf 
@@ -139,7 +139,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 	- Parse shakespeare text - TOTALTIME: 0:06:30*379532 
 
 
-- ###  Tasks 26-02-2015 
+- ### Tasks 26-02-2015 
 
 	- Try to use machine learning 
 	- Do some more tests in openCV 
@@ -148,7 +148,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 
 
-- ###  Tasks 27-02-2015 
+- ### Tasks 27-02-2015 
 
 	- Make a demo for sentiment analysis for demo day 
 	- Search for reflection in javascript 
@@ -159,7 +159,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	
 
-- ###  Tasks for 2-03-2015 
+- ### Tasks for 2-03-2015 
 
 	- Analyze gensim lib for text summarizing 
 	- Take a look to featureserver project 
@@ -172,13 +172,13 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://cscorley.github.io/2014/05/06/using-gensim-for-lda/ 
 
 
-- ###  Tasks for 3-03-2015 
+- ### Tasks for 3-03-2015 
 
 	* Try to configure a featureserver (gis) 
 	* Do some JS tutorials for nodeschool 
 
 
-- ###  Tasks for 4-03-2015 
+- ### Tasks for 4-03-2015 
 	* Standby featureserver project 
 	* Try to get something working on text summarize 
 	* Keep working on nodeschool tutorials 
@@ -207,7 +207,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://www.predictiveanalyticstoday.com/text-analytics/ 
 		* http://geojsonlint.com/ 
 
-- ###  Tasks for 5-03-2015 
+- ### Tasks for 5-03-2015 
 
 	* Install feature server - V 
 	* Try to get it working - ¬ 
