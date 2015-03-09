@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python 
+import logging 
 import math, nltk, datetime, string 
 from nltk.corpus import stopwords 
+from gensim import corpora, models, similarities 
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO) 
 
 
+# TF - Term frequency (List frequencies for each word) 
 def tf(ocurrences): 
 	return float(1 + math.log(ocurrences))
 
@@ -11,8 +15,8 @@ docs = {}
 docLines = {} 
 if __name__ == '__main__':
 	startTime = datetime.datetime.now() 
-	# documentList = ["./texts/t11.txt","./texts/t22.txt"]; 
-	documentList = ["./texts/shak.txt"]; 
+	documentList = ["./texts/t11.txt","./texts/t22.txt"]; 
+	# documentList = ["./texts/shak.txt"]; 
 	totalDocs = len(documentList) 
 	for documentFilename in documentList: 
 		doc = open(documentFilename,'r')  
@@ -30,3 +34,5 @@ if __name__ == '__main__':
   			output.write("Word: {} Value: {}\n".format(w, docLines[w])) 
 	output.write("TOTALTIME: {}".format(datetime.datetime.now()-startTime)) 
 	output.close() 
+
+

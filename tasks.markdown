@@ -233,5 +233,6 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://textminingonline.com/dive-into-nltk-part-ii-sentence-tokenize-and-word-tokenize
 		* http://www.summarization.com/ 
 		* http://videolectures.net/mlss09uk_blei_tm/ 
+		* http://www.cs.upc.edu/~nlp/wikicorpus/
 
 		
