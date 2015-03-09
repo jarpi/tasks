@@ -207,7 +207,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://www.predictiveanalyticstoday.com/text-analytics/ 
 		* http://geojsonlint.com/ 
 
-- ### H3 Tasks for 5-03-2015 
+- ### Tasks for 5-03-2015 
 
 	* Install feature server - V 
 	* Try to get it working - ¬ 
@@ -220,11 +220,10 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://xml.fmi.fi/namespace/meteorology/conceptual-model/meteorological-objects/2009/04/28/docindex43.html 
 		* http://www.gmlcentral.com/gml-model/ 
 
-- ### H3 Tasks for 6-03-2015 
+- ### Tasks for 6-03-2015 
 
 	* Try to search an alternative for featureserver 
 	* Attend to skype meeting 
 
-	
-
+- ### 
 

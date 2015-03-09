@@ -159,7 +159,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	
 
-- ### Tasks for 2-03-2015 
+- ### Tasks 2-03-2015 
 
 	- Analyze gensim lib for text summarizing 
 	- Take a look to featureserver project 
@@ -172,13 +172,13 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://cscorley.github.io/2014/05/06/using-gensim-for-lda/ 
 
 
-- ### Tasks for 3-03-2015 
+- ### Tasks 3-03-2015 
 
 	* Try to configure a featureserver (gis) 
 	* Do some JS tutorials for nodeschool 
 
 
-- ### Tasks for 4-03-2015 
+- ### Tasks 4-03-2015 
 	* Standby featureserver project 
 	* Try to get something working on text summarize 
 	* Keep working on nodeschool tutorials 
@@ -207,7 +207,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://www.predictiveanalyticstoday.com/text-analytics/ 
 		* http://geojsonlint.com/ 
 
-- ### Tasks for 5-03-2015 
+- ### Tasks 5-03-2015 
 
 	* Install feature server - V 
 	* Try to get it working - ¬ 
@@ -220,11 +220,18 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://xml.fmi.fi/namespace/meteorology/conceptual-model/meteorological-objects/2009/04/28/docindex43.html 
 		* http://www.gmlcentral.com/gml-model/ 
 
-- ###  Tasks for 6-03-2015 
+- ###  Tasks 6-03-2015 
 
 	* Try to search an alternative for featureserver 
 	* Attend to skype meeting 
 
+- ### Tasks 9-03-2015 
 	
+	Resources: 
+		* http://programmers.stackexchange.com/questions/175981/good-technique-for-search-text-tokenization	
+		* http://textanalysisonline.com/ 
+		* http://textminingonline.com/dive-into-nltk-part-ii-sentence-tokenize-and-word-tokenize
+		* http://www.summarization.com/ 
+		* http://videolectures.net/mlss09uk_blei_tm/ 
 
-
+		
