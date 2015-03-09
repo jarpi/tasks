@@ -212,7 +212,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 	* Install feature server - V 
 	* Try to get it working - ¬ 
 
-	Resources: 
+	* Resources: 
 		* http://lists.osgeo.org/pipermail/featureserver/2008-August/000260.html 
 		* http://jsonlint.com/ 
 		* http://geojsonlint.com/ 
@@ -227,7 +227,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 - ### Tasks 9-03-2015 
 	
-	Resources: 
+	* Resources: 
 		* http://programmers.stackexchange.com/questions/175981/good-technique-for-search-text-tokenization	
 		* http://textanalysisonline.com/ 
 		* http://textminingonline.com/dive-into-nltk-part-ii-sentence-tokenize-and-word-tokenize
