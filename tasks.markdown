@@ -234,5 +234,10 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://www.summarization.com/ 
 		* http://videolectures.net/mlss09uk_blei_tm/ 
 		* http://www.cs.upc.edu/~nlp/wikicorpus/
+- ### Tasks 10-03-2015 
 
+	* Add algorithms to topic analyzer 
+	* Continue reading postgis book 
+
+	 
 		
