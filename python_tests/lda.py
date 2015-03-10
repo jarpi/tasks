@@ -31,3 +31,6 @@ class LDA:
 			self.ldaModel = models.LdaModel(self.corpus, id2word=self.dictionary, num_topics=10) 
 			self.index = similarities.SparseMatrixSimilarity(self.ldaModel[self.corpus], num_features=12) 
 			self.isInitialized = True   
+
+
+

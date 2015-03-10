@@ -18,9 +18,8 @@ class TfIdf:
 
 	def runQuery(self,keyword): 
 		if ( self.isInitialized ): 
-			vec = self.dictionary.doc2bow(keyword.lower().split()) 
+			vec = self.dictionary.doc2bow(keyword.lower().strip().split()) 
 			sims = self.index[self.tfidfModel[vec]] 
-			print self.tfidfModel 
 			return (list(enumerate(sims))) 
 		return [] 
 
@@ -28,9 +27,12 @@ class TfIdf:
 		if ( not self.isInitialized ): 
 			self.texts = self.utils.cleanStopWordsPunctuations(self.documentList, self.stopList) 
 			self.dictionary = corpora.Dictionary(self.texts) 
+			print (self.dictionary) 
 			self.corpus = [self.dictionary.doc2bow(text) for text in self.texts] 
+			print (self.corpus) 
 			self.tfidfModel = models.TfidfModel(self.corpus) 
 			self.index = similarities.SparseMatrixSimilarity(self.tfidfModel[self.corpus], num_features=12) 
+			print (self.dictionary.token2id) 
 			self.isInitialized = True   
 
 
