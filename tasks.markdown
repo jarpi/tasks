@@ -239,5 +239,14 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 	* Add algorithms to topic analyzer 
 	* Continue reading postgis book 
 
+- ### Tasks 11-03-2015 
+	
+	* Fix bugs in weighting code 
+	* Test different algorithms 
+
+	* Resources: 
+		* http://www.williamjohnbert.com/2012/05/relatively-quick-and-easy-gensim-example-code/ 
+
+		 
 	 
 		

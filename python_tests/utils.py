@@ -3,13 +3,14 @@
 import string 
 
 class Utils: 
-	def cleanStopWordsPunctuations(self, documentList, stopList): 
+	def cleanStopWordsPunctuations(self, line, stopList): 
 		texts = [] 
-		for documentFilename in documentList: 
-			doc = open(documentFilename,'r')  
-			for line in doc: 
-				line = line.translate(None, string.punctuation)
-				texts.append([word for word in line.lower().split() if word not in stopList]) 
-			doc.close() 
+		line = line.translate(None, string.punctuation) 
+		for word in line.lower().split(): 
+			if not word in stopList: 
+				texts.append(word) 
+		print (texts) 
 		return texts 
+
+
 
