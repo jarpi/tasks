@@ -3,28 +3,43 @@
 import sys 
 from textblob.classifiers import NaiveBayesClassifier 
 
-train_set = [
-    ('i love this sandwich.', 'pos'),
-    ('i like', 'pos'), 
-    ('i do like', 'pos'), 
-    ('this is an amazing place!', 'pos'),
-    ('i feel very good about these beers.', 'pos'),
-    ('this is my best work.', 'pos'),
-    ('what an awesome view', 'pos'), 
-    ('he is my friend', 'pos'), 
-    ('do you like', 'pos'), 
+# train_set = [
+#     ('i love this sandwich.', 'pos'),
+#     ('i like', 'pos'), 
+#     ('i do like', 'pos'), 
+#     ('this is an amazing place!', 'pos'),
+#     ('i feel very good about these beers.', 'pos'),
+#     ('this is my best work.', 'pos'),
+#     ('what an awesome view', 'pos'), 
+#     ('he is my friend', 'pos'), 
+#     ('do you like', 'pos'), 
 
-    ('i do not like this restaurant', 'neg'),
-    ("i don't like this",'neg'),  
-    ('i am tired of this stuff.', 'neg'),
-    ("i can't deal with this", 'neg'),
-    ('he is my sworn enemy!', 'neg'),
-    ('enemy', 'neg'), 
-    ('my boss is horrible.', 'neg'),  
-    ('i do not like', 'neg'), 
-    ('i hate', 'neg') 
-    ] 
-    
+#     ('i do not like this restaurant', 'neg'),
+#     ("i don't like this",'neg'),  
+#     ('i am tired of this stuff.', 'neg'),
+#     ("i can't deal with this", 'neg'),
+#     ('he is my sworn enemy!', 'neg'),
+#     ('enemy', 'neg'), 
+#     ('my boss is horrible.', 'neg'),  
+#     ('i do not like', 'neg'), 
+#     ('i hate', 'neg') 
+#     ] 
+
+def train_positive(): 
+    for document in positiveSet: 
+        for  line in open(document) if not line.index(';'): 
+            train_set.append((line,'pos'))
+
+def train_negative(): 
+    for document in negativeSet: 
+        for  line in open(document) if not line.index(';'): 
+            train_set.append((line,'neg')) 
+
+
+positiveSet = ['./texts/positive-words.txt']
+negativeSet = ['./texts/negative-words.txt']  
+train_set = [] 
+
 test_set = [
 	('The beer was good.', 'pos'),
     ('I do not enjoy my job', 'neg'),
@@ -35,7 +50,9 @@ test_set = [
     ] 
 
 if __name__ == '__main__': 
-    print "Initiallizing classifier... (training...)"
+    print "Initiallizing classifier... (training...)" 
+    train_positive() 
+    train_negative() 
     classifier = NaiveBayesClassifier(train_set) 
     print classifier.accuracy(test_set) 
     print classifier.show_informative_features() 
@@ -48,7 +65,5 @@ if __name__ == '__main__':
             break
         if not line:
             break
-
-
 
 

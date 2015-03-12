@@ -246,7 +246,16 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	* Resources: 
 		* http://www.williamjohnbert.com/2012/05/relatively-quick-and-easy-gensim-example-code/ 
+		* http://stackoverflow.com/questions/22283396/document-similarity-gensim 
 
 		 
-	 
-		
+- ### Tasks 12-03-2015 
+	
+	* GeoServer REST tests 
+	* Analyze connector for other REST datasources 
+
+	* Resources: 
+		* http://docs.geoserver.org/latest/en/user/extensions/importer/rest_examples.html 
+		* http://es.slideshare.net/jdeolive/geoscript-spatial-capabilities-for-scripting-languages?next_slideshow=2 
+
+				
