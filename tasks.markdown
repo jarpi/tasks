@@ -257,5 +257,15 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 	* Resources: 
 		* http://docs.geoserver.org/latest/en/user/extensions/importer/rest_examples.html 
 		* http://es.slideshare.net/jdeolive/geoscript-spatial-capabilities-for-scripting-languages?next_slideshow=2 
+		* http://www.idee.es/resources/documentos/RD_wfs_v2_0.pdf 
+		* http://es.wikipedia.org/wiki/GeoTools
+		* http://docs.geotools.org/latest/developer/communication.html 
+		* http://geotoolsnews.blogspot.com.es/2010/09/geospatial-for-java-workbooks-available.html 
+		* You don't know your JS (callbacks, promises, generators) 
 
-				
+- ### Tasks 15-03-2015 
+
+	* Resources for hack on business 2015: 
+		* strategyzer.com 
+
+		
