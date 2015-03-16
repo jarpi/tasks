@@ -273,5 +273,4 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	* Load words into python dictionary to improve sentiment analysis 
 	* Search info about creating and deploying a WFS rest server with GeoTools 
-
-	
+	* Try to do a minimum rest api 
