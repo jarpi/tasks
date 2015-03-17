@@ -57,10 +57,10 @@ if __name__ == '__main__':
     # print train_set 
     # classifier = NaiveBayesClassifier(train_set) 
     
-    with open('./texts/words.txt', 'r') as fp: 
-        classifier = NaiveBayesClassifier(fp, format="csv") 
-        print classifier.accuracy(test_set) 
-        print classifier.show_informative_features() 
+    # with open('./texts/words.txt', 'r') as fp: 
+    #     classifier = NaiveBayesClassifier(fp, format="csv") 
+    #     print classifier.accuracy(test_set) 
+    #     print classifier.show_informative_features() 
 
 
     print "Ready " 
