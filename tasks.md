@@ -278,4 +278,10 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 - ### Tasks 17-03-2015 
 	
 	* Implement a minimal method of WFS "GetFeature" with nodeJS and express 
+	* http://www.hola.com/actualidad/2015031777516/hermana-ronaldo-habla-separacion/ 
 
+- ### Tasks 18-03-2015 
+
+	* Work query parser 
+
+	
