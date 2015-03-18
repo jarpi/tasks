@@ -284,4 +284,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	* Work query parser 
 
+	* Resources: 
+		* Overriding methods in Javascript: http://stackoverflow.com/questions/6885404/javascript-override-methods 
+
 	

@@ -88,6 +88,6 @@ function doAPIGet(url) {
 			console.log("Error ocurred while getting features..."); 
 		}); 
 	}); 
-}
+} 
 
 
