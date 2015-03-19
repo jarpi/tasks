@@ -289,8 +289,24 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://dailyjs.com/2012/11/26/js101-proto/ 
 		* http://philipwalton.com/articles/implementing-private-and-protected-members-in-javascript/ 
 		* http://www.meanstack.co/javascript-proto-vs-prototype-proto/ 
-
+		* http://wildlyinaccurate.com/understanding-javascript-inheritance-and-the-prototype-chain/ 
+		* http://www.htmlgoodies.com/beyond/javascript/accessing-private-functions-in-javascript.html 
+		* https://javascriptweblog.wordpress.com/2010/06/07/understanding-javascript-prototypes/ 
+		* http://www.meanstack.co/javascript-proto-vs-prototype-proto/ 
+		* http://geekabyte.blogspot.com.es/2013/03/difference-between-protoype-and-proto.html 
+		* http://stackoverflow.com/questions/13040684/javascript-inheritance-object-create-vs-new 
+		* http://dailyjs.com/2012/06/04/js101-object-create/ 
+		* http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/ 
+		* http://stackoverflow.com/questions/6885404/javascript-override-methods 
 		
+		* Each object instance is have a __proto__ that means and instance to the object that was used 
+		to made it. 
+		
+		* A function is called constructor, is also has a "prototype" var automatically created that points to an instance of the "function.prototype" who exposes instance variable and methods 
 
 
-	
+
+
+
+
+

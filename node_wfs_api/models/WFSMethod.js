@@ -1,22 +1,33 @@
-function WFSMethod(methodName) {
-	this.methodName = methodName; 
-	this.testValue = 'Test value A'; 
+function WFSMethod(queryParams) {
+	this.mandatoryParams = []; 
+	this.optionalParams = []; 
+	this.queryParams = queryParams; 
 };  
 
-WFSMethod.prototype.checkRequestParam = function() {
-	return "{'error':'Not implemented'}"; 
+WFSMethod.prototype.checkMandatoryParams = function() { 
+	throw error("Not implemented"); 
 }; 
 
-WFSMethod.prototype.execMethod = function() {
-	return "{'error':'Not implemented'}"; 
-}; 
+// WFSMethod.prototype.checkParams = function() {
 
-WFSMethod.prototype.runQuery = function(url) {
-	return "{'error':'Not implemented'}"; 
-}; 
+// }; 
 
-WFSMethod.prototype.showValue = function() {
-	console.log(this.testValue + " SUPERCLASS WFSMETHOD"); 
-}; 
+// WFSMethod.prototype.parseParams = function(queryParams) { 
+// 	// Object.keys(queryParams).forEach( 
+// 	// 		function(key,index){
+// 	// 			paramsString += 
+// 	// 			key + 
+// 	// 			"=" + 
+// 	// 			queryParams[key] + 
+// 	// 			(index<Object.keys(queryParams).length-1 ? "&" : ""); 
+// 	// 		}); 
+// }; 
+
+// WFSMethod.prototype.showValue = function() {
+// 	console.log(this.testValue + " SUPERCLASS WFSMETHOD"); 
+// }; 
 
 module.exports = WFSMethod; 
+
+
+
