@@ -286,5 +286,11 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	* Resources: 
 		* Overriding methods in Javascript: http://stackoverflow.com/questions/6885404/javascript-override-methods 
+		* http://dailyjs.com/2012/11/26/js101-proto/ 
+		* http://philipwalton.com/articles/implementing-private-and-protected-members-in-javascript/ 
+		* http://www.meanstack.co/javascript-proto-vs-prototype-proto/ 
+
+		
+
 
 	
