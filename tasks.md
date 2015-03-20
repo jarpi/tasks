@@ -298,15 +298,21 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://dailyjs.com/2012/06/04/js101-object-create/ 
 		* http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/ 
 		* http://stackoverflow.com/questions/6885404/javascript-override-methods 
+		* http://es.slideshare.net/cacois/nodejs-patterns-for-discerning-developers 
 		
 		* Each object instance is have a __proto__ that means and instance to the object that was used 
 		to made it. 
 		
 		* A function is called constructor, is also has a "prototype" var automatically created that points to an instance of the "function.prototype" who exposes instance variable and methods 
 
+		* Machine learning and funny things in nodejs: http://73rhodes.github.io/talks/ 
 
 
+- ### Tasks 20-03-2015 
+	
+	* Get something working 
 
+	
 
 
 
