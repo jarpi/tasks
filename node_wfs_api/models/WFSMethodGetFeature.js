@@ -3,8 +3,22 @@ var WFSMethod = require('./WFSMethod.js');
 function WFSMethodGetFeature(queryParams) 
 { 
 	WFSMethod.call(this, queryParams); 
-	this.mandatoryParams = {request:undefined,typename:undefined}; 
-	this.optionalParams = {aliases:undefined, srsName:undefined, projection_clause:undefined, filter:undefined, filter_language:undefined, resourceid:undefined, bbox:undefined, sortby:undefined, stored_query_id:undefined, stored_query_parameter:undefined}; 
+	this.mandatoryParams = {
+		request:undefined,
+		typename:undefined
+	}; 
+	this.optionalParams = {
+		aliases:undefined, 
+		srsName:undefined, 
+		projection_clause:undefined, 
+		filter:undefined, 
+		filter_language:undefined, 
+		resourceid:undefined, 
+		bbox:undefined, 
+		sortby:undefined, 
+		stored_query_id:undefined, 
+		stored_query_parameter:undefined
+	}; 
 }; 
 
 WFSMethodGetFeature.prototype = Object.create(WFSMethod.prototype); 
@@ -15,7 +29,6 @@ WFSMethodGetFeature.prototype.fillMandatoryParams = function() {
 	var iOkParamsCount = 0; 
 	Object.keys(this.mandatoryParams).forEach( 
 			function(key){ 
-				console.log(that.queryParams[key]); 
 				if (!key in that.queryParams && that.queryParams[key] === undefined) 
 					return -1; 
 				iOkParamsCount += 1; 
@@ -27,7 +40,6 @@ WFSMethodGetFeature.prototype.fillMandatoryParams = function() {
 WFSMethodGetFeature.prototype.fillOptionalParams = function() { 
 	var that = this; 
 	var iOkParamsCount = 0; 
-	console.log(this.queryParams); 
 	Object.keys(this.optionalParams).forEach( 
 			function(key){ 
 				if (key in that.queryParams && that.queryParams[key] !== undefined) 
@@ -44,22 +56,14 @@ WFSMethodGetFeature.prototype.createRequest = function() {
 	var httpRequest = "http://jarpi.cartodb.com/api/v2/sql?q="; 
 	var oAuthKey = "bd6a0a7c3d64f870e375cd57489121e1fd9515e0"; 
 	var sqlQuery = "SELECT+*+FROM+" + tableName; 
-	console.dir(this.optionalParams.resourceid); 
 	if (this.optionalParams.resourceid !== undefined)
 	{
 		sqlQuery += "+WHERE+cartodb_id=" + this.optionalParams.resourceid; 
 	}
 	httpRequest += sqlQuery + "&api_key=" + oAuthKey;  
-	console.log(httpRequest); 
 	return httpRequest; 
 }; 
 
-// WFSMethodGetFeature.prototype.showValue = function() { 
-// 	console.log(this.testValue + " CHILD CLASS GETFEATURE");  
-// };  
-
 module.exports = WFSMethodGetFeature; 
-
-
 
 

@@ -14,7 +14,7 @@ var wfsMethods = {
 
 // Test urls 
 var testCartoUrl = "http://jarpi.cartodb.com/api/v2/sql";  
-var testGeoServerUrl = 'http://localhost:8080/geoserver/wfs'; 
+// var testGeoServerUrl = 'http://localhost:8080/geoserver/wfs'; 
 
 // Server listen init 
 var server = app.listen(3000, function () {
@@ -25,52 +25,84 @@ var server = app.listen(3000, function () {
 
 // Get http request (view, router) 
 app.get('/wfs', function (req, res) { 
-	if (req.route.path.toLowerCase() == '/wfs' && req.query.request) 
-	{
-		var requestMethod = req.query.request;  
-		var methodToCall = ParseMethodToCall(requestMethod); 
-		if (methodToCall) 
-		{
-			// Create new instance of the method 
-			// Call check params and get result 
-			// Parse params 
-			// Send request to server 
-			// Return result to user (pipe techinque? pipe result from server to user)
-			var a = new methodToCall(req.query); 
-			var isParamsMatch = a.fillMandatoryParams(); 
-			a.fillOptionalParams();  
-			console.log(isParamsMatch); 
-			if(isParamsMatch) {  
-				a.fillOptionalParams()  
-				var httpUrlRequest = a.createRequest(); 
-				utils.doGet(httpUrlRequest, function(err, data){
-					res.status(202).json({'result':data}); 
-					res.end(); 
-				}); 
-			} 
-		} 
-		else 
-		{
-			res.status(404).json(
-				{'error':'Method not found'}); 
-		} 
+	
+	// Check that query params exists, send error otherwise 
+	var existsQueryParams = req.query.request; 
+	if (!existsQueryParams) 
+	{	
+		sendError(res, 'Query needed'); 
+		return; 
 	} 
-	else 
+
+	// Get method to call 
+	var queryRequestMethod = req.query.request;  
+	var methodToCall = GetMethodFromRequest(queryRequestMethod); 
+	if (methodToCall === undefined) 
 	{
-		res.status(404).json(
-				{'error':'Malformed query'}); 
+		sendError(res, 'Method not recognized'); 
+		return;  
+	}
+
+	// Create new instance of the method 
+	// 		// Call check params and get result 
+	// 		// Parse params 
+	// 		// Send request to server 
+	// 		// Return result to user (pipe techinque? pipe result from server to user)
+	var a = new methodToCall(req.query); 
+	var isParamsMatch = a.fillMandatoryParams(); 
+	a.fillOptionalParams();  
+	if(!isParamsMatch) {  
+		sendError(res, 'Params mismatch'); 
+		return;  
 	} 
-	// Need to fix 
-	// res.end(); 
+	var url = a.createRequest(); 
+	dispatchRequest(url, res); 
+
+	// if (existsQueryParams) 
+	// {	
+	// 	// Get method to call 
+	// 	var queryRequestMethod = req.query.request;  
+	// 	var methodToCall = GetMethodFromRequest queryRequestMethod); 
+	// 	if (methodToCall !== undefined) 
+	// 	{
+	// 		// Create new instance of the method 
+	// 		// Call check params and get result 
+	// 		// Parse params 
+	// 		// Send request to server 
+	// 		// Return result to user (pipe techinque? pipe result from server to user)
+	// 		var a = new methodToCall(req.query); 
+	// 		var isParamsMatch = a.fillMandatoryParams(); 
+	// 		a.fillOptionalParams();  
+	// 		if(isParamsMatch) {  
+	// 			a.fillOptionalParams()  
+	// 			var url = a.createRequest(); 
+	// 			dispatchRequest(url, res); 
+	// 		} 
+	// 	} 
+	// 	// Method does not exist  
+	// 	else 
+	// 	{ 
+	// 		res.status(404).json(
+	// 			{'error':'Method not recognized'}).end(); 
+	// 	} 
+	// } 
+	// // There are no query params 
+	// else 
+	// {
+	// 	res.status(404).json(
+	// 			{'error':'Query needed'}).end(); 
+	// } 
 }); 
 
 // Get logic function to call from request query param (Controller) 
-function ParseMethodToCall(request) {
+function GetMethodFromRequest(request) 
+{
 	if (request == "GetFeature") 
 	{
 		return wfsMethods.GetFeature; 
 	} 
-	else if (request == "GetCapabilities") {
+	else if (request == "GetCapabilities") 
+	{
 		return wfsMethods.GetCapabilities; 
 	}
 	else 
@@ -79,32 +111,31 @@ function ParseMethodToCall(request) {
 	}
 } 
 
-// Execute method (Model) // queryParams = object,value 
-// function GetFeatureService(queryParams) 
-// { 
-// 	// {Mandatory fields: [{request:GetFeature},{typename:feature_table_id}]} 
-// 	var expectedParams = ['request', 'typename']; 
-// 	console.dir(queryParams); 
-// 	var paramsString = ""; 
-// 	Object.keys(queryParams).forEach( 
-// 			function(key,index){
-// 				paramsString += 
-// 				key + 
-// 				"=" + 
-// 				queryParams[key] + 
-// 				(index<Object.keys(queryParams).length-1 ? "&" : ""); 
-// 			}); 
-// 	var workSpace = queryParams.typename.split(":").slice(0); 
-// 	var tableName = queryParams.typename.split(":").slice(1); 
-// 	testGeoServerUrl += '?' + paramsString; 
-// 	testCartoUrl += "?q=SELECT+*+FROM+"+tableName+"&api_key=bd6a0a7c3d64f870e375cd57489121e1fd9515e0&format=GeoJSON"; 
-// 	utils.doGet(testCartoUrl); 
-// } 
-
-function GetCapabilitiesService() {
+function GetCapabilitiesService() 
+{
 	console.log("GetCapabilitiesService"); 
 } 
 
+function dispatchRequest(url, requestResponse) 
+{
+	http.get(url, function(response){ 
+		response.once('data', function(){
+			requestResponse.status(202); 
+			response.pipe(requestResponse);  
+		}); 
+		response.once('error', function(error){
+			requestResponse.status(404).json({'error':error}); 
+		}); 
+		response.once('end', function(){ 
+			requestResponse.end(); 
+		});
+	}).once('error', function(error){	
+		requestResponse.status(202).json({'error':error}); 
+	});   
+}
 
-
+function sendError(responseStream, error) 
+{
+	responseStream.status(404).json({'error':error}).end();
+}
 
