@@ -300,6 +300,11 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://stackoverflow.com/questions/6885404/javascript-override-methods 
 		* http://es.slideshare.net/cacois/nodejs-patterns-for-discerning-developers 
 		
+		* How generators replace callbacks: http://jlongster.com/A-Study-on-Solving-Callbacks-with-JavaScript-Generators
+
+		* Book: Javascript patterns 
+		* http://bonsaiden.github.io/JavaScript-Garden/ 
+
 		* Each object instance is have a __proto__ that means and instance to the object that was used 
 		to made it. 
 		
@@ -307,12 +312,19 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 		* Machine learning and funny things in nodejs: http://73rhodes.github.io/talks/ 
 
+		* Talks for every Javascript developer: https://www.youtube.com/playlist?list=PLseEp7p6Ewia6RT5Ngz8yk-t-jAZvA-8N 
+
 
 - ### Tasks 20-03-2015 
 	
 	* Get something working 
 
+- ### Tasks 21-03-2015 
 	
+	* Keep working on layer 
+
+
+
 
 
 

@@ -2,20 +2,23 @@ var http = require('http');
 
 function Utils() {}; 
 
-Utils.prototype.doGet = function (url) 
+Utils.prototype.doGet = function (url, cb) 
 {
 	http.get(url, function(response){ 
-		var data = ""; 
+		var data = ''; 
 		response.on('data', function(chunk){
 			data += chunk; 
 		}); 
-		response.on('end', function(){
-			console.dir(data); 
+		response.on('end', function(){ 
+			return cb(null,data); 
 		}); 
 		response.on('error', function(){
-			console.log("Error ocurred while getting features..."); 
+			data = "Error ocurred while parsing features..."; 
 		}); 
+	}).on('error',function(error){ 
+		return cb(null,error); 
 	}); 
 }; 
 
 module.exports = Utils; 
+
