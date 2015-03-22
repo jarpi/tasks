@@ -314,16 +314,22 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 		* Talks for every Javascript developer: https://www.youtube.com/playlist?list=PLseEp7p6Ewia6RT5Ngz8yk-t-jAZvA-8N 
 
-
+		* NodeJS streams: http://nodestreams.com/ 
+		* http://koajs.com/ 
+		
 - ### Tasks 20-03-2015 
 	
 	* Get something working 
 
 - ### Tasks 21-03-2015 
 	
-	* Keep working on layer 
+	* Keep working on WFS layer 
 
 
+
+- ### Tasks 22-03-2015 
+
+	* Keep adding feature to WFS layer 
 
 
 

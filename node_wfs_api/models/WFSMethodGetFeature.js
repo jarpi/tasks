@@ -50,11 +50,11 @@ WFSMethodGetFeature.prototype.fillOptionalParams = function() {
 
 WFSMethodGetFeature.prototype.createRequest = function() {
 	// http://jarpi.cartodb.com/api/v2/sql?q=SELECT+count(*)+FROM+distritos&api_key=bd6a0a7c3d64f870e375cd57489121e1fd9515e0 
+	var httpRequest = "http://jarpi.cartodb.com/api/v2/sql?q="; 
+	var oAuthKey = "bd6a0a7c3d64f870e375cd57489121e1fd9515e0"; 
 	var mandatoryParamsArray = this.mandatoryParams.typename.split(":"); 
 	var workSpace = mandatoryParamsArray.slice(0); 
 	var tableName = mandatoryParamsArray.slice(1); 
-	var httpRequest = "http://jarpi.cartodb.com/api/v2/sql?q="; 
-	var oAuthKey = "bd6a0a7c3d64f870e375cd57489121e1fd9515e0"; 
 	var sqlQuery = "SELECT+*+FROM+" + tableName; 
 	if (this.optionalParams.resourceid !== undefined)
 	{
