@@ -329,7 +329,7 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 - ### Tasks 22-03-2015 
 
-	* Keep adding feature to WFS layer 
+	* Keep adding features to WFS layer 
 
 
 
