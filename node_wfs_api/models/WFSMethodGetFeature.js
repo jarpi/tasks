@@ -1,52 +1,12 @@
 var WFSMethod = require('./WFSMethod.js'); 
 
-function WFSMethodGetFeature(queryParams) 
+function WFSMethodGetFeature(queryParams, params) 
 { 
-	WFSMethod.call(this, queryParams); 
-	this.mandatoryParams = {
-		request:undefined,
-		typename:undefined
-	}; 
-	this.optionalParams = {
-		aliases:undefined, 
-		srsName:undefined, 
-		projection_clause:undefined, 
-		filter:undefined, 
-		filter_language:undefined, 
-		resourceid:undefined, 
-		bbox:undefined, 
-		sortby:undefined, 
-		stored_query_id:undefined, 
-		stored_query_parameter:undefined
-	}; 
+	WFSMethod.call(this, queryParams, params); 
 }; 
 
 WFSMethodGetFeature.prototype = Object.create(WFSMethod.prototype); 
 WFSMethodGetFeature.prototype.constructor = WFSMethodGetFeature;  
-
-WFSMethodGetFeature.prototype.fillMandatoryParams = function() { 
-	var that = this; 
-	var iOkParamsCount = 0; 
-	Object.keys(this.mandatoryParams).forEach( 
-			function(key){ 
-				if (!key in that.queryParams && that.queryParams[key] === undefined) 
-					return -1; 
-				iOkParamsCount += 1; 
-				that.mandatoryParams[key] = that.queryParams[key]; 
-			}); 
-	return (iOkParamsCount == Object.keys(this.mandatoryParams).length);  
-}; 
-
-WFSMethodGetFeature.prototype.fillOptionalParams = function() { 
-	var that = this; 
-	var iOkParamsCount = 0; 
-	Object.keys(this.optionalParams).forEach( 
-			function(key){ 
-				if (key in that.queryParams && that.queryParams[key] !== undefined) 
-					that.optionalParams[key] = that.queryParams[key]; 
-			}); 
-	return (Object.keys(this.optionalParams).length);  
-}; 
 
 WFSMethodGetFeature.prototype.createRequest = function() {
 	// http://jarpi.cartodb.com/api/v2/sql?q=SELECT+count(*)+FROM+distritos&api_key=bd6a0a7c3d64f870e375cd57489121e1fd9515e0 
@@ -65,5 +25,3 @@ WFSMethodGetFeature.prototype.createRequest = function() {
 }; 
 
 module.exports = WFSMethodGetFeature; 
-
-

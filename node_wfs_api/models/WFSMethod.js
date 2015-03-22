@@ -1,34 +1,31 @@
-function WFSMethod(queryParams) {
-	this.mandatoryParams = {}; 
-	this.optionalParams = {}; 
+function WFSMethod(queryParams, params) {
+	this.mandatoryParams = params.MandatoryParams; 
+	this.optionalParams = params.OptionalParams; 
 	this.queryParams = queryParams; 
 };  
 
-WFSMethod.prototype.checkMandatoryParams = function() { 
-	throw error("Not implemented"); 
+WFSMethod.prototype.fillOptionalParams = function() { 
+	var that = this; 
+	var iOkParamsCount = 0; 
+	Object.keys(this.optionalParams).forEach( 
+			function(key){ 
+				if (key in that.queryParams && that.queryParams[key] !== undefined) 
+					that.optionalParams[key] = that.queryParams[key]; 
+			}); 
+	return (Object.keys(this.optionalParams).length);  
 }; 
 
-// WFSMethod.prototype.checkParams = function() {
-
-// }; 
-
-// WFSMethod.prototype.parseParams = function(queryParams) { 
-// 	// Object.keys(queryParams).forEach( 
-// 	// 		function(key,index){
-// 	// 			paramsString += 
-// 	// 			key + 
-// 	// 			"=" + 
-// 	// 			queryParams[key] + 
-// 	// 			(index<Object.keys(queryParams).length-1 ? "&" : ""); 
-// 	// 		}); 
-// }; 
-
-// WFSMethod.prototype.showValue = function() {
-// 	console.log(this.testValue + " SUPERCLASS WFSMETHOD"); 
-// }; 
+WFSMethod.prototype.fillMandatoryParams = function() { 
+	var that = this; 
+	var iOkParamsCount = 0; 
+	Object.keys(this.mandatoryParams).forEach( 
+			function(key){ 
+				if (!key in that.queryParams && that.queryParams[key] === undefined) 
+					return -1; 
+				iOkParamsCount += 1; 
+				that.mandatoryParams[key] = that.queryParams[key]; 
+			}); 
+	return (iOkParamsCount == Object.keys(this.mandatoryParams).length);  
+}; 
 
 module.exports = WFSMethod; 
-
-
-
-
