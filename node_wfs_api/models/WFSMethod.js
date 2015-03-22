@@ -1,6 +1,6 @@
 function WFSMethod(queryParams) {
-	this.mandatoryParams = []; 
-	this.optionalParams = []; 
+	this.mandatoryParams = {}; 
+	this.optionalParams = {}; 
 	this.queryParams = queryParams; 
 };  
 
