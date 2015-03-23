@@ -16,55 +16,6 @@ WfsApp.prototype.LoadConfig = function () {
 	this.FillMethodParams(); 
 }; 
 
-WfsApp.prototype.RunQuery = function(query, responseStream) 
-{
-	// Check that query has params, send error otherwise 
-		if (!query.request) 
-		{	
-			SendError(responseStream, 400, 'Query not recognized'); 
-			return; 
-		} 
-
-		// Extract request param == method to call 
-		var candidateMethod = query.request;  
-		var methodToCall = this.GetMethodObject(candidateMethod); 
-		if (methodToCall === undefined) 
-		{
-			sendError(responseStream, 400, 'Method not recognized'); 
-			return;  
-		} 
-
-		// Create new instance of the method 
-		// 		// Call check params and get result 
-		// 		// Parse params 
-		// 		// Send request to server 
-		// 		// Return result to user (pipe? pipe result from server to user)
-		var methodInstance = new methodToCall(query, methodObjectsParams[candidateMethod]); 
-		if (!methodInstance instanceof WFSMethod) 
-		{
-			sendError(responseStream, 400, 'Method type mismatch'); 
-		}
-
-		var existsMandatoryParams = methodInstance.fillMandatoryParams(); 
-		if(!existsMandatoryParams) {  
-			sendError(responseStream, 400, 'Params mismatch'); 
-			return;  
-		} 
-
-		methodInstance.fillOptionalParams();  
-		var url = methodInstance.createRequest(); 
-		this.DispatchRequest(url, responseStream); 
-		return 1; 
-}; 
-
-// Get logic function to call from request query param (Controller) 
-WfsApp.prototype.GetMethodObject = function (candidateMethod) 
-{
-	if (methodObjects[candidateMethod] !== undefined)
-		return methodObjects[candidateMethod]; 
-	return undefined; 
-}; 
-
 // Create an object association between {wfs_method} ---> {[Function]}
 WfsApp.prototype.FillMethodObjects = function() 
 { 
@@ -99,6 +50,56 @@ WfsApp.prototype.FillMethodParams = function ()
 	}	
 }; 
 
+// Get logic function to call from request query param (Controller) 
+WfsApp.prototype.GetMethodObject = function (candidateMethod) 
+{
+	if (methodObjects[candidateMethod] !== undefined)
+		return methodObjects[candidateMethod]; 
+	return undefined; 
+}; 
+
+WfsApp.prototype.RunQuery = function(query, responseStream) 
+{
+	// Check that query has params, send error otherwise 
+		if (!query.request) 
+		{	
+			this.SendError(responseStream, 400, 'Query not recognized'); 
+			return; 
+		} 
+
+		// Extract request param == method to call 
+		var candidateMethod = query.request;  
+		var methodToCall = this.GetMethodObject(candidateMethod); 
+		if (methodToCall === undefined) 
+		{
+			this.SendError('Method not recognized', 400, responseStream); 
+			return;  
+		} 
+
+		// Create new instance of the method 
+		// 		// Call check params and get result 
+		// 		// Parse params 
+		// 		// Send request to server 
+		// 		// Return result to user (pipe? pipe result from server to user)
+		var methodInstance = new methodToCall(query, methodObjectsParams[candidateMethod]); 
+		if (!methodInstance instanceof WFSMethod) 
+		{
+			this.SendError('Method type mismatch', 400, responseStream); 
+		}
+
+		var existsMandatoryParams = methodInstance.fillMandatoryParams(); 
+		if(!existsMandatoryParams) {  
+			this.SendError('Params mismatch', 400, responseStream); 
+			return;  
+		} 
+
+		methodInstance.fillOptionalParams();  
+		var url = methodInstance.createRequest(); 
+		console.log(url); 
+		this.DispatchRequest(url, responseStream); 
+		return 1; 
+}; 
+
 // Once url is correctly formed, send request to API 
 WfsApp.prototype.DispatchRequest = function (url, responseStream) 
 {
@@ -108,13 +109,13 @@ WfsApp.prototype.DispatchRequest = function (url, responseStream)
 			response.pipe(responseStream);  
 		}); 
 		response.once('error', function(error){ 
-			sendError(responseStream, 404, error); 
+			this.SendError(error.toString(), 404, responseStream); 
 		}); 
 		response.once('end', function(){ 
 			responseStream.end(); 
 		});
 	}).once('error', function(error){	
-		sendError(responseStream, 404, error); 
+		this.SendError(error.toString(), 404, responseStream); 
 	});   
 }; 
 

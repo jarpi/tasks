@@ -17,11 +17,11 @@ WFSMethod.prototype.fillOptionalParams = function() {
 
 WFSMethod.prototype.fillMandatoryParams = function() { 
 	var that = this; 
-	var iOkParamsCount = 0; 
+	var iOkParamsCount = 0;
 	Object.keys(this.mandatoryParams).forEach( 
 			function(key){ 
-				if (!key in that.queryParams && that.queryParams[key] === undefined) 
-					return -1; 
+				if (!key in that.queryParams || that.queryParams[key] === undefined) 
+					return undefined; 
 				iOkParamsCount += 1; 
 				that.mandatoryParams[key] = that.queryParams[key]; 
 			}); 
