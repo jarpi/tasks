@@ -331,6 +331,18 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 
 	* Keep adding features to WFS layer 
 
+	Resources: 
+		* http://www.nodehispano.com/ 
+
+		
+- ### Tasks [23-27]-03-2015 
+	
+	* Write unit tests 
+	* Write functional tests 
+	* Upload to travis 
+	* Try to improve performance 
+
+	
 
 
 
