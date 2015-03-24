@@ -4,12 +4,17 @@
   "description": "Minimum WFS API parser for node",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodeunit tests/unit_test.js" 
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jarpi/tasks/node_api"
   },
-  "author": "jarpi",
-  "license": "ISC"
+  "author": "Josep Arpí Vallès",
+  "license": "ISC", 
+  "dependencies": {
+    "express":">=4.12.x", 
+    "nodemon":">=1.3.x", 
+    "nodeunit":">=0.9.x" 
+  }
 }

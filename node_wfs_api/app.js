@@ -2,9 +2,11 @@ var http = require('http');
 var express = require('express');
 var app = express(); 
 var appPath = __dirname; 
-var wfsMainApp = require(appPath+'/WfsApp.js'); 
+var wfsMainApp = require(appPath+'/wfs-app.js'); 
 var WFSMethod = require(appPath+'/models/WFSMethod.js');
 var wfsMain = new wfsMainApp(); 
+
+console.dir(wfsMain instanceof Function); 
 
 // Init server 
 wfsMain.LoadConfig(); 

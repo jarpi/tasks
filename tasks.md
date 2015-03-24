@@ -335,14 +335,26 @@ The most recent book on speech recognition is "Automatic Speech Recognition: A D
 		* http://www.nodehispano.com/ 
 
 		
-- ### Tasks [23-27]-03-2015 
+- ### Tasks 23-03-2015  
 	
 	* Write unit tests 
 	* Write functional tests 
 	* Upload to travis 
 	* Try to improve performance 
+	* Upload to travis-ci 
+
+	Resources: 
+		* https://github.com/caolan/nodeunit
+		* https://travis-ci.org/jarpi/node_wfs_api/ 
+		* http://www.clock.co.uk/blog/tools-for-unit-testing-and-quality-assurance-in-node-js
+		* https://nodejs.org/api/assert.html 
+		* http://code.tutsplus.com/tutorials/travis-ci-what-why-how--net-34771 
+
+- ### Tasks 24-03-2015 
+
+	* Write unit tests 
+	* Write documentation 
+	* Fix word extractor 
 
 	
-
-
 
