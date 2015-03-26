@@ -20,7 +20,7 @@ class TfIdf:
 		if (self.isInitialized): 
 			# self.dictionary.doc2bow(keyword.lower().strip().split())
 			vec = self.corpus.convertToBOW(keyword) 
-			sims = self.index[self.tfidfModel[vec]] 
+			sims = self.index[self.tfidfModel[vec]]  
 			return (list(enumerate(sims))) 
 		return [] 
 
